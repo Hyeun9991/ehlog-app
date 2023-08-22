@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Container */
+  .detail-container {
+    @apply container px-4 mx-auto py-10 sm:py-16 sm:px-0 md:w-[700px];
+  }
+}
