@@ -3,8 +3,30 @@
 @tailwind utilities;
 
 @layer components {
+  /* Titles */
+  .title-3xl {
+    @apply text-2xl md:text-3xl font-semibold text-[#1d1d1f];
+  }
+  .title-2xl {
+    @apply text-xl md:text-2xl font-semibold text-[#1d1d1f];
+  }
+
+  .dot-text {
+    @apply text-3xl leading-3 md:text-4xl;
+  }
+
+  /* Buttons */
+  .link-button {
+    @apply font-semibold text-[#0171e3] hover:underline flex gap-1 items-center;
+  }
+
   /* Container */
   .detail-container {
     @apply container px-4 mx-auto py-10 sm:py-16 sm:px-0 md:w-[700px];
+  }
+
+  /* Position */
+  .position-center {
+    @apply absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2;
   }
 }
