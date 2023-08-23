@@ -2,25 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-family: suit;
+}
+
 @layer components {
   /* Titles */
-  .title-3xl {
-    @apply text-2xl md:text-3xl font-semibold text-[#1d1d1f];
+  /* .title-3xl {
+    @apply font-oranienbaum text-xl md:text-2xl font-light uppercase text-[#1d1d1f];
   }
   .title-2xl {
-    @apply text-xl md:text-2xl font-semibold text-[#1d1d1f];
-  }
+    @apply font-suit text-lg md:text-xl font-light uppercase text-[#1d1d1f];
+  } */
 
+  /* Dot Text */
   .dot-text {
-    @apply text-3xl leading-3 md:text-4xl;
+    @apply text-2xl leading-3 md:text-3xl;
   }
 
   /* Buttons */
   .link-button {
-    @apply font-semibold text-[#0171e3] hover:underline flex gap-1 items-center;
+    @apply flex items-center gap-1 font-semibold text-black hover:underline;
+    /* @apply font-semibold text-[#0171e3] hover:underline flex gap-1 items-center; */
+  }
+  .primary-button {
+    @apply px-8 py-2 text-xs uppercase transition-all border rounded-full border-borderColor bg-bgColor-dark text-textColor-dark hover:bg-bgColor-dark hover:text-textColor-dark hover:px-9 hover:font-semibold;
+  }
+  .secondary-button {
+    @apply px-8 py-2 text-xs uppercase transition-all border rounded-full border-borderColor text-textColor-light hover:bg-bgColor-dark hover:text-textColor-dark hover:px-9 hover:font-semibold;
   }
 
   /* Container */
+  .main-container {
+    @apply container lg:w-[1080px] md:min-h-screen mx-auto p-4 lg:p-6;
+  }
   .detail-container {
     @apply container px-4 mx-auto py-10 sm:py-16 sm:px-0 md:w-[700px];
   }

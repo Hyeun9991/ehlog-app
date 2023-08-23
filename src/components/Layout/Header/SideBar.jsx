@@ -27,7 +27,8 @@ const SideBar = () => {
             : 'translate-x-full bg-black/70'
         } `}
       >
-        <ul className="flex flex-col text-3xl text-[#f5f5f7] gap-y-3">
+        <ul className="flex flex-col text-3xl text-[#f5f5f7] gap-y-3 uppercase">
+          <p className="mb-1 font-light opacity-60">Menu</p>
           {MenuItems.map((item) => (
             <li className="flex" key={item.id}>
               <a
@@ -42,8 +43,8 @@ const SideBar = () => {
             </li>
           ))}
         </ul>
-        <ul className="flex flex-col text-lg text-[#f5f5f7] gap-y-3">
-          <p className="mb-1 opacity-60">연락하기</p>
+        <ul className="flex flex-col text-lg text-[#f5f5f7] gap-y-3 uppercase">
+          <p className="mb-1 font-light opacity-60">Social & Content</p>
           {ContentItems.map((item) => (
             <li key={item.id}>
               <a href={item.to} target="_blank" rel="noreferrer">

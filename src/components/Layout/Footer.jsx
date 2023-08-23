@@ -4,12 +4,10 @@ import { ContentItems } from './Header/MenuItems';
 
 const Footer = () => {
   return (
-    <div className="bg-[#f5f5f7]">
-      <div className="container relative flex items-center justify-between py-6 mx-auto">
+    <section className="bg-secondaryColor">
+      <footer className="container relative flex flex-col-reverse items-center justify-between py-5 mx-auto uppercase sm:flex-row gap-y-16">
         {/* Version */}
-        <div>
-          <p className="text-xs text-[#6e6e73]">last update 23.08.22</p>
-        </div>
+        <p className="text-xs text-textColor-light/70">last update 23.08.22</p>
 
         {/* Logo */}
         <div className="position-center">
@@ -17,13 +15,13 @@ const Footer = () => {
         </div>
 
         {/* Content Items */}
-        <ul className="flex items-center text-xs text-[#6e6e73] gap-x-9">
+        <ul className="flex items-center text-xs text-textColor-light/70 gap-x-6 sm:gap-x-9">
           {ContentItems.map((item) => (
             <li key={item.id}>
               <a
                 href={item.to}
                 target="_blank"
-                className="transition-all hover:text-black"
+                className="transition-all hover:text-textColor-light"
                 rel="noreferrer"
               >
                 {item.name}
@@ -31,8 +29,8 @@ const Footer = () => {
             </li>
           ))}
         </ul>
-      </div>
-    </div>
+      </footer>
+    </section>
   );
 };
 

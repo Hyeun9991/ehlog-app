@@ -1,12 +1,11 @@
 import React from 'react';
-import { images } from '../../../constants';
 import SideBar from './SideBar';
 import Logo from '../../Logo';
 import { MenuItems } from './MenuItems';
 
 const Header = () => {
   return (
-    <section className="fixed top-0 left-0 w-full transition-all bg-white/70 backdrop-blur-sm hover:bg-white">
+    <section className="fixed top-0 left-0 z-50 w-full transition-all border-b border-borderColor bg-white/70 backdrop-blur-lg hover:bg-white">
       <header className="container flex items-center justify-between px-5 py-2.5 mx-auto">
         {/* Logo */}
         <Logo />
@@ -18,17 +17,14 @@ const Header = () => {
               <li key={item.id}>
                 <a
                   href={item.to}
-                  className="transition-all opacity-80 hover:opacity-100"
+                  className="uppercase transition-all opacity-80 hover:opacity-100"
                 >
                   {item.name}
                 </a>
               </li>
             ))}
           </ul>
-          <button className="hidden text-xs py-2.5 px-9 md:flex items-center gap-1 rounded text-bold bg-black text-white transition-all hover:bg-[#333]">
-            <img src={images.LightSmallLogo} alt="logo" className="w-[10px]" />
-            Sign in
-          </button>
+          <button className="primary-button">Sign in</button>
         </div>
 
         {/* Side Bar */}

@@ -3,100 +3,142 @@ import { IoArrowForward } from 'react-icons/io5';
 
 const NewPosts = () => {
   return (
-    <section>
-      <h1 className="mb-6 title-3xl">
-        New Posts
-        <span className="dot-text"> .</span>
-      </h1>
+    <section className="pt-20 border-b border-borderColor">
+      <div className="main-container">
+        <div className="flex flex-col items-start gap-10 mb-6 lg:gap-20 lg:flex-row ">
+          <div className="">
+            <span className="leading-3 uppercase text-7xl md:text-8xl font-oranienbaum font-extralight">
+              New
+            </span>
+            <h1 className="uppercase text-8xl md:text-9xl font-oranienbaum">
+              Posts
+            </h1>
+          </div>
 
-      {/* Post Items */}
-      <div className="grid grid-cols-1 gap-6 mb-6 md:grid-cols-2 lg:grid-cols-4">
-        <a href="/" className="group">
-          <div className="transition-all bg-[#f5f5f7] rounded-lg group-hover:bg-black">
-            <div className="h-[150px] bg-gray-300/40 rounded-lg rounded-b-none"></div>
-            <div className="p-4">
-              <h2 className="transition-all mb-2 title-2xl group-hover:text-[#eeeeee]">
-                title 1
-              </h2>
-              {/* <p className="transition-all mb-2 overflow-hidden text-sm text-[#1d1d1f] whitespace-normal line-clamp-2 group-hover:text-[#eeeeee]">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Nesciunt nemo incidunt, soluta, iure impedit omnis dolores quam
-                harum fugiat possimus veniam corrupti quisquam consectetur iusto
-                distinctio autem aliquid commodi vitae.
-              </p> */}
-              <p className="transition-all text-xs text-[#6e6e73] group-hover:text-[#eeeeee]">
-                2023.08.22.화요일
-              </p>
-            </div>
-          </div>
-        </a>
-        <a href="/" className="group">
-          <div className="transition-all bg-[#f5f5f7] rounded-lg group-hover:bg-black">
-            <div className="h-[150px] bg-gray-300/40 rounded-lg rounded-b-none"></div>
-            <div className="p-4">
-              <h2 className="transition-all mb-2 text-xl md:text-2xl font-semibold text-[#1d1d1f] group-hover:text-[#eeeeee]">
-                title 1
-              </h2>
-              {/* <p className="transition-all mb-2 overflow-hidden text-sm text-[#1d1d1f] whitespace-normal line-clamp-2 group-hover:text-[#eeeeee]">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Nesciunt nemo incidunt, soluta, iure impedit omnis dolores quam
-                harum fugiat possimus veniam corrupti quisquam consectetur iusto
-                distinctio autem aliquid commodi vitae.
-              </p> */}
-              <p className="transition-all text-xs text-[#6e6e73] group-hover:text-[#eeeeee]">
-                2023.08.22.화요일
-              </p>
-            </div>
-          </div>
-        </a>
-        <a href="/" className="group">
-          <div className="transition-all bg-[#f5f5f7] rounded-lg group-hover:bg-black">
-            <div className="h-[150px] bg-gray-300/40 rounded-lg rounded-b-none"></div>
-            <div className="p-4">
-              <h2 className="transition-all mb-2 text-xl md:text-2xl font-semibold text-[#1d1d1f] group-hover:text-[#eeeeee]">
-                title 1
-              </h2>
-              {/* <p className="transition-all mb-2 overflow-hidden text-sm text-[#1d1d1f] whitespace-normal line-clamp-2 group-hover:text-[#eeeeee]">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Nesciunt nemo incidunt, soluta, iure impedit omnis dolores quam
-                harum fugiat possimus veniam corrupti quisquam consectetur iusto
-                distinctio autem aliquid commodi vitae.
-              </p> */}
-              <p className="transition-all text-xs text-[#6e6e73] group-hover:text-[#eeeeee]">
-                2023.08.22.화요일
-              </p>
-            </div>
-          </div>
-        </a>
-        <a href="/" className="group">
-          <div className="transition-all bg-[#f5f5f7] rounded-lg group-hover:bg-black">
-            <div className="h-[150px] bg-gray-300/40 rounded-lg rounded-b-none"></div>
-            <div className="p-4">
-              <h2 className="transition-all mb-2 text-xl md:text-2xl font-semibold text-[#1d1d1f] group-hover:text-[#eeeeee]">
-                title 1
-              </h2>
-              {/* <p className="transition-all mb-2 overflow-hidden text-sm text-[#1d1d1f] whitespace-normal line-clamp-2 group-hover:text-[#eeeeee]">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Nesciunt nemo incidunt, soluta, iure impedit omnis dolores quam
-                harum fugiat possimus veniam corrupti quisquam consectetur iusto
-                distinctio autem aliquid commodi vitae.
-              </p> */}
-              <p className="transition-all text-xs text-[#6e6e73] group-hover:text-[#eeeeee]">
-                2023.08.22.화요일
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
+          {/* Main Item */}
+          <a
+            href="/"
+            className="relative flex flex-col border border-borderColor group"
+          >
+            {/* image */}
+            <div className="bg-gray-200 h-[250px]"></div>
 
-      {/* More Button */}
-      <div className="flex justify-center w-full">
-        <button className="link-button">
-          더 보러가기
-          <span className="text-xs">
-            <IoArrowForward />
-          </span>
-        </button>
+            {/* Info */}
+            <div className="flex flex-col gap-2 p-4">
+              <p className="text-xs text-textColor-light/70">
+                2023.08.23.수요일
+              </p>
+              <h2 className="text-xl font-light uppercase sm:text-2xl text-textColor-light">
+                Main Post, 메인 포스트
+              </h2>
+              <p className="overflow-hidden text-sm leading-6 whitespace-normal text-textColor-light line-clamp-3 sm:line-clamp-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                possimus praesentium nostrum, quod inventore eos deleniti iusto
+                magnam sunt harum necessitatibus voluptatibus cum asperiores
+                iste dolorum, eum ad nihil accusantium non esse sed facilis
+                laudantium. Aperiam vel debitis et beatae! Lorem ipsum dolor sit
+                amet consectetur adipisicing elit. Dolor possimus praesentium
+                nostrum, quod inventore eos deleniti iusto magnam sunt harum
+                necessitatibus voluptatibus cum asperiores iste dolorum, eum ad
+                nihil accusantium non esse sed facilis laudantium. Aperiam vel
+                debitis et beatae! Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Dolor possimus praesentium nostrum, quod
+                inventore eos deleniti iusto magnam sunt harum necessitatibus
+                voluptatibus cum asperiores iste dolorum, eum ad nihil
+                accusantium non esse sed facilis laudantium. Aperiam vel debitis
+                et beatae!
+              </p>
+            </div>
+            <p
+              href="/"
+              className="absolute flex items-center justify-end gap-1 text-xs uppercase right-0 top-[-1.5rem] group-hover:right-[-6px] transition-all group-hover:text-primaryColor"
+            >
+              more
+              <IoArrowForward />
+            </p>
+          </a>
+        </div>
+
+        {/* Post Items */}
+        <div className="hidden grid-cols-1 gap-6 mb-6 md:grid md:grid-cols-2 lg:grid-cols-3">
+          {/* Item */}
+          <a href="/" className="flex flex-col border border-borderColor group">
+            {/* image */}
+            <div className="bg-gray-200 h-[180px]"></div>
+            <div className="flex flex-col gap-1 p-3">
+              <p className="text-xs text-textColor-light/70">
+                2023.08.23.수요일
+              </p>
+              <h2 className="text-lg font-light uppercase text-textColor-light">
+                title 1, 타이틀 1
+              </h2>
+              <p className="overflow-hidden text-sm whitespace-normal text-textColor-light line-clamp-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                possimus praesentium nostrum, quod inventore eos deleniti iusto
+                magnam sunt harum necessitatibus voluptatibus cum asperiores
+                iste dolorum, eum ad nihil accusantium non esse sed facilis
+                laudantium. Aperiam vel debitis et beatae!
+              </p>
+              <p className="flex items-center justify-end gap-1 text-xs uppercase transition-all group-hover:px-1 group-hover:text-primaryColor">
+                more
+                <IoArrowForward />
+              </p>
+            </div>
+          </a>
+          {/* Item */}
+          <a href="/" className="flex flex-col border border-borderColor group">
+            {/* image */}
+            <div className="bg-gray-200 h-[180px]"></div>
+            <div className="flex flex-col gap-1 p-3">
+              <p className="text-xs text-textColor-light/70">
+                2023.08.23.수요일
+              </p>
+              <h2 className="text-lg font-light uppercase text-textColor-light">
+                title 1, 타이틀 1
+              </h2>
+              <p className="overflow-hidden text-sm whitespace-normal text-textColor-light line-clamp-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                possimus praesentium nostrum, quod inventore eos deleniti iusto
+                magnam sunt harum necessitatibus voluptatibus cum asperiores
+                iste dolorum, eum ad nihil accusantium non esse sed facilis
+                laudantium. Aperiam vel debitis et beatae!
+              </p>
+              <p className="flex items-center justify-end gap-1 text-xs uppercase transition-all group-hover:px-1 group-hover:text-primaryColor">
+                more
+                <IoArrowForward />
+              </p>
+            </div>
+          </a>
+          {/* Item */}
+          <a href="/" className="flex flex-col border border-borderColor group">
+            {/* image */}
+            <div className="bg-gray-200 h-[180px]"></div>
+            <div className="flex flex-col gap-1 p-3">
+              <p className="text-xs text-textColor-light/70">
+                2023.08.23.수요일
+              </p>
+              <h2 className="text-lg font-light uppercase text-textColor-light">
+                title 1, 타이틀 1
+              </h2>
+              <p className="overflow-hidden text-sm whitespace-normal text-textColor-light line-clamp-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                possimus praesentium nostrum, quod inventore eos deleniti iusto
+                magnam sunt harum necessitatibus voluptatibus cum asperiores
+                iste dolorum, eum ad nihil accusantium non esse sed facilis
+                laudantium. Aperiam vel debitis et beatae!
+              </p>
+              <p className="flex items-center justify-end gap-1 text-xs uppercase transition-all group-hover:px-1 group-hover:text-primaryColor">
+                more
+                <IoArrowForward />
+              </p>
+            </div>
+          </a>
+        </div>
+
+        {/* More Button */}
+        <a href="/" className="flex justify-center">
+          <button className="mt-2 secondary-button">Show More</button>
+        </a>
       </div>
     </section>
   );
