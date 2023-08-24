@@ -1,5 +1,6 @@
-# memo md
-memo.md
-
 # dependencies
 /node_modules
+
+# misc
+.env
+memo.md
