@@ -23,7 +23,6 @@ html {
   /* Buttons */
   .link-button {
     @apply flex items-center gap-1 font-semibold text-black hover:underline;
-    /* @apply font-semibold text-[#0171e3] hover:underline flex gap-1 items-center; */
   }
   .primary-button {
     @apply px-8 py-2 text-xs uppercase transition-all border rounded-full border-borderColor bg-bgColor-dark text-textColor-dark hover:bg-bgColor-dark hover:text-textColor-dark hover:px-9 hover:font-semibold;
